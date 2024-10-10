@@ -119,7 +119,7 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
+                    image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREBJTML-mgsofe733pWPxlZcbfZadAfBglf5a28Vrq3sbocDUB2TSl2ntV6rhQrqTwjdw&usqp=CAU"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
