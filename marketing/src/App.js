@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Router, BrowserRouter } from 'react-router-dom';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { StylesProvider } from '@material-ui/core';
 
 import Landing from "./components/Landing";
