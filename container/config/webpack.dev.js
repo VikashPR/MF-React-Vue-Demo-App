@@ -18,6 +18,7 @@ const devConfig = {
         marketing:
           "marketing@https://bug-free-goldfish-wx4jp5xpjgph9wr5-8081.app.github.dev//remoteEntry.js",
       },
+      shared: ["react", "react-dom"],
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
