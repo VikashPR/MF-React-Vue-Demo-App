@@ -17,7 +17,6 @@ const devConfig = {
       remotes: {
         marketing:
           "marketing@https://bug-free-goldfish-wx4jp5xpjgph9wr5-8081.app.github.dev//remoteEntry.js",
-        auth: "auth@https://bug-free-goldfish-wx4jp5xpjgph9wr5-8082.app.github.dev//remoteEntry.js",
       },
     }),
     new HtmlWebpackPlugin({
