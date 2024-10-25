@@ -4,21 +4,26 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const commonConfig = require('./webpack.common');
 
 const devConfig = {
-    mode: 'development',
-    devServer: {
-        port: 8080,
-        historyApiFallback: {
-            index: "index.html"
-        }
+  mode: "development",
+  devServer: {
+    port: 8080,
+    historyApiFallback: {
+      index: "index.html",
     },
-    plugins: [
-        new ModuleFederationPlugin({
-            
-        }),
-        new HtmlWebpackPlugin({
-            template: './public/index.html'
-        })
-    ]
+  },
+  plugins: [
+    new ModuleFederationPlugin({
+      name: "container",
+      remotes: {
+        marketing:
+          "marketing@https://bug-free-goldfish-wx4jp5xpjgph9wr5-8081.app.github.dev//remoteEntry.js",
+        auth: "auth@https://bug-free-goldfish-wx4jp5xpjgph9wr5-8082.app.github.dev//remoteEntry.js",
+      },
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+    }),
+  ],
 };
 
 module.exports = merge(commonConfig, devConfig)
