@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common');
+const packageJson = require('../package.json');
 
 const devConfig = {
   mode: "development",
@@ -18,7 +19,7 @@ const devConfig = {
         marketing:
           "marketing@https://bug-free-goldfish-wx4jp5xpjgph9wr5-8081.app.github.dev//remoteEntry.js",
       },
-      shared: ["react", "react-dom"],
+      shared: packageJson.dependencies,
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
