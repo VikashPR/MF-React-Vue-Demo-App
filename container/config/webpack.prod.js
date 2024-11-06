@@ -4,17 +4,18 @@ const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
 const prodConfig = {
-    mode: 'production',
-    output: {
-        filename: '[name].[contenthash].js',
-        publicPath: '/container/latest/',
-    },
-    plugins: [
-        new ModuleFederationPlugin({
-            name: "container",
-            remotes: {
-                marketing: "marketing@http://localhost:8081/remoteEntry.js",
-            },
-        })
-    ]
-}
+  mode: "production",
+  output: {
+    filename: "[name].[contenthash].js",
+    publicPath: "/container/latest/",
+  },
+  plugins: [
+    new ModuleFederationPlugin({
+      name: "container",
+      remotes: {
+        marketing:
+          "marketing@https://bug-free-goldfish-wx4jp5xpjgph9wr5-8081.app.github.dev",
+      },
+    }),
+  ],
+};
