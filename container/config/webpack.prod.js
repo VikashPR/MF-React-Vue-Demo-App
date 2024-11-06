@@ -3,6 +3,8 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
+const domain = process.env.PRODUCTION_DOMAIN;
+
 const prodConfig = {
   mode: "production",
   output: {
@@ -14,7 +16,7 @@ const prodConfig = {
       name: "container",
       remotes: {
         marketing:
-          "marketing@https://bug-free-goldfish-wx4jp5xpjgph9wr5-8081.app.github.dev",
+          `marketing@${domain}`,
       },
     }),
   ],
