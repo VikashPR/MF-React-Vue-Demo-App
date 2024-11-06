@@ -16,7 +16,7 @@ const prodConfig = {
       name: "container",
       remotes: {
         marketing:
-          `marketing@${domain}`,
+          `marketing@${domain}/marketing/remoteEntry.js`,
       },
     }),
   ],
